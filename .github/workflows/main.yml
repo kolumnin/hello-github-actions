@@ -15,3 +15,12 @@ runs:
 branding:
   icon: "mic"
   color: "purple"
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./action-a
+        with:
+          MY_NAME: "Mona"
